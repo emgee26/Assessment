@@ -1,0 +1,43 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Assessment" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryVariant">@color/mid_light_green</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorAccent">@color/green</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/mid_light_green</item>
+        <item name="colorSecondaryVariant">@color/mid_light_green</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:buttonTint">@color/transparent</item>
+    </style>
+
+    <style name="SaveButtonStyle" parent="Theme.Assessment">
+        <item name="android:background">@drawable/btn_save_bg</item>
+    </style>
+
+    <style name="DeleteButtonStyle" parent="Theme.Assessment">
+        <item name="android:background">@drawable/btn_delete_bg</item>
+    </style>
+
+    <style name="ResetButtonStyle" parent="Theme.Assessment">
+        <item name="android:background">@drawable/btn_reset_bg</item>
+    </style>
+
+    <style name="customRatingBar"
+        parent="android:style/Widget.Material.RatingBar.Small">
+    </style>
+
+    <style name="RadioButtonStyle" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:colorControlActivated">@color/green</item>
+    </style>
+
+
+
+
+</resources>

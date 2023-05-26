@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Straight corners for the top of the action bar -->
+    <item
+        android:top="0dp"
+        android:left="0dp"
+        android:right="0dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white_background" />
+        </shape>
+    </item>
+
+    <!-- Rounded corners for the bottom of the action bar -->
+    <item
+        android:bottom="0dp"
+        android:left="0dp"
+        android:right="0dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="@color/green_variant"
+                android:endColor="@color/green"
+                android:angle="0"/>
+            <corners android:topLeftRadius="0dp"
+                android:topRightRadius="0dp"
+                android:bottomLeftRadius="15dp"
+                android:bottomRightRadius="15dp" />
+        </shape>
+    </item>
+</layer-list>

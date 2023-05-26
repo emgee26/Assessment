@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.DetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="23dp"
+            android:src="@drawable/sample_picture"
+            app:civ_border_color="@color/green"
+            app:civ_border_width="2dp"
+            app:layout_constraintEnd_toStartOf="@+id/name"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/placeholder_name"
+            android:singleLine="false"
+            android:maxLines="3"
+            android:textColor="@color/black"
+            android:textSize="@dimen/heading_font_size_large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/profile_image"
+            app:layout_constraintTop_toTopOf="@+id/profile_image" />
+
+
+        <TextView
+            android:id="@+id/occupation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/placeholder_occupation"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/body_font_size_medium"
+            app:layout_constraintStart_toStartOf="@+id/name"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
+
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/placeholder_male"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/body_font_size_medium"
+            app:layout_constraintStart_toStartOf="@+id/occupation"
+            app:layout_constraintTop_toBottomOf="@+id/occupation" />
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/gps"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gender" />
+
+        <TextView
+            android:id="@+id/business"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/placeholder_business_type"
+            android:textColor="@color/black"
+            android:textSize="@dimen/body_font_size_medium"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/gender" />
+
+        <TextView
+            android:id="@+id/separator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/column_separator"
+            android:textColor="@color/black"
+            android:textSize="@dimen/body_font_size_medium"
+            app:layout_constraintStart_toEndOf="@id/business"
+            app:layout_constraintTop_toBottomOf="@+id/gender" />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/placeholder_location"
+            android:textColor="@color/black"
+            android:textSize="@dimen/body_font_size_medium"
+            app:layout_constraintStart_toEndOf="@+id/separator"
+            app:layout_constraintTop_toBottomOf="@+id/gender" />
+
+
+        <RatingBar
+            android:id="@+id/rating_bar"
+            style="@style/customRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:numStars="5"
+            android:rating="4.0"
+            android:stepSize="0.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gender" />
+
+        <TextView
+            android:id="@+id/labelBirthPlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/birth_place_label"
+            android:textColor="@color/black"
+            android:textSize="@dimen/body_font_size_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/business" />
+
+        <TextView
+            android:id="@+id/txtBirthPlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/placeholder_birthplace_example"
+            android:textColor="@color/small_text"
+            android:textSize="@dimen/body_font_size_medium"
+            app:layout_constraintStart_toEndOf="@+id/labelBirthPlace"
+            app:layout_constraintTop_toBottomOf="@+id/business" />
+
+        <TextView
+            android:id="@+id/labelDateOfBirth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/label_date_of_birth"
+            android:textColor="@color/black"
+            android:textSize="@dimen/body_font_size_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelBirthPlace" />
+
+        <TextView
+            android:id="@+id/txtDateOfBirth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/placeholder_text_date_of_birth"
+            android:textColor="@color/small_text"
+            android:textSize="@dimen/body_font_size_medium"
+            app:layout_constraintStart_toEndOf="@+id/labelDateOfBirth"
+            app:layout_constraintTop_toBottomOf="@+id/txtBirthPlace" />
+
+
+        <TextView
+            android:id="@+id/labelHouseNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/label_house_number"
+            android:textColor="@color/black"
+            android:textSize="@dimen/body_font_size_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelDateOfBirth" />
+
+
+        <TextView
+            android:id="@+id/txtHouseNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/placeholder_text_house_number"
+            android:textColor="@color/small_text"
+            android:textSize="@dimen/body_font_size_medium"
+            app:layout_constraintStart_toEndOf="@+id/labelHouseNumber"
+            app:layout_constraintTop_toBottomOf="@+id/txtDateOfBirth" />
+
+
+        <TextView
+            android:id="@+id/labelCommunity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/label_community"
+            android:textColor="@color/black"
+            android:textSize="@dimen/body_font_size_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelHouseNumber" />
+
+        <TextView
+            android:id="@+id/txtCommunity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/placeholder_text_community"
+            android:textColor="@color/small_text"
+            android:textSize="@dimen/body_font_size_medium"
+            app:layout_constraintStart_toEndOf="@+id/labelCommunity"
+            app:layout_constraintTop_toBottomOf="@+id/txtHouseNumber" />
+
+        <TextView
+            android:id="@+id/labelDistrict"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/label_district"
+            android:textColor="@color/black"
+            android:textSize="@dimen/body_font_size_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelCommunity" />
+
+        <TextView
+            android:id="@+id/txtDistrict"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/placeholder_text_district"
+            android:textColor="@color/small_text"
+            android:textSize="@dimen/body_font_size_medium"
+            app:layout_constraintStart_toEndOf="@+id/labelDistrict"
+            app:layout_constraintTop_toBottomOf="@+id/txtCommunity" />
+
+        <TextView
+            android:id="@+id/labelRegion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/label_region"
+            android:textColor="@color/black"
+            android:textSize="@dimen/body_font_size_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelDistrict" />
+
+
+        <TextView
+            android:id="@+id/txtRegion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/placeholder_text_region"
+            android:textColor="@color/small_text"
+            android:textSize="@dimen/body_font_size_medium"
+            app:layout_constraintStart_toEndOf="@+id/labelRegion"
+            app:layout_constraintTop_toBottomOf="@+id/txtDistrict" />
+
+
+        <TextView
+            android:id="@+id/labelMaritalStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/label_marital_status"
+            android:textColor="@color/black"
+            android:textSize="@dimen/body_font_size_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelRegion" />
+
+
+        <TextView
+            android:id="@+id/txtMaritalStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/label_single"
+            android:textColor="@color/small_text"
+            android:textSize="@dimen/body_font_size_medium"
+            app:layout_constraintStart_toEndOf="@+id/labelMaritalStatus"
+            app:layout_constraintTop_toBottomOf="@+id/txtRegion" />
+
+
+        <LinearLayout
+            android:id="@+id/layout_bio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="23dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtMaritalStatus">
+
+            <TextView
+                android:id="@+id/labelBio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/label_bio"
+                android:textColor="@color/black"
+                android:textSize="@dimen/body_font_size_medium" />
+
+            <TextView
+                android:id="@+id/txtBio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_semibold"
+                android:lineSpacingExtra="2dp"
+                android:text="@string/placeholder_text_bio"
+                android:textColor="@color/small_text"
+                android:textSize="@dimen/body_font_size_medium" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btnEditProfile"
+            style="@style/ResetButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="200dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:minHeight="35dp"
+            android:text="@string/btl_label_edit_profile"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/body_font_size_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnDelete"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_bio" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            style="@style/DeleteButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="200dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:minHeight="35dp"
+            android:text="@string/btn_label_delete"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/body_font_size_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnEditProfile"
+            app:layout_constraintTop_toBottomOf="@+id/layout_bio" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

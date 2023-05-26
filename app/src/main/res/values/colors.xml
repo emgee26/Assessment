@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="green">#22A45D</color>
+    <color name="green_variant">#3DBF77</color>
+    <color name="small_text">#666666</color>
+    <color name="black">#000000</color>
+    <color name="selected_profiles">#F3F3FC</color>
+    <color name="info_panel_header">#F6F6F8</color>
+    <color name="title_bar_colour">#FAFBFC</color>
+    <color name="red">#EA3829</color>
+    <color name="blue">#3892F3</color>
+    <color name="light_blue">#E0F2FF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_background">#F2F4F6</color>
+    <color name="light_green">#F3FCF5</color>
+    <color name="cream">#FFEBE7</color>
+    <color name="mid_light_green">#BDE4CF</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="grey">#AEAEAE</color>
+</resources>
